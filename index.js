@@ -86,7 +86,7 @@ const checkUserOnlineStatus = async () => {
       console.log(`${user} is available and online`);
     } else {
       console.log("about to send email");
-      if (!stopEmails) {
+      if (stopEmails == false) {
         sendEmail({
           subject: 'offline come online',
           message: 'Hello Boss, your bybit card is offline.',
